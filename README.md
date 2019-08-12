@@ -4,11 +4,11 @@
 
 ### demo 地址
 
-[demo 演示地址](https://Haoz03.github.io/react-pay-layer/build/)
+[demo 演示地址](https://Haoz03.github.io/react-pay-layer-demo/build/)
 
 ### 动态图演示
 
-![演示动图](https://haoz03.github.io/react-pay-layer/build/demo.gif)
+![演示动图](https://haoz03.github.io/react-pay-layer-demo/build/demo.gif)
 
 ### 插件的安装
 
