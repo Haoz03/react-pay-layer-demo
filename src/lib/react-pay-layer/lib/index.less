@@ -1,0 +1,212 @@
+.layer-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: flex;
+  align-items: flex-end;
+  background-color: rgba(37, 47, 61, 0.6);
+  .inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+    transform: translateY(0px);
+    .both-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .layer-close-btn {
+      position: absolute;
+      top: 18px;
+      left: 12px;
+      width: 14px;
+      height: 14px;
+      color: #97a4b3;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    .title {
+      float: none;
+      height: 50px;
+      color: #4b5259;
+      font-size: 18px;
+      border-bottom: 1px solid rgba(185, 185, 185, 0.24);
+    }
+    .password-ul {
+      float: none;
+      padding: 20px 12px;
+      display: flex;
+      .password-li {
+        flex: 1;
+        height: 45px;
+        border-top: 1px solid rgba(185, 185, 185, 0.5);
+        border-bottom: 1px solid rgba(185, 185, 185, 0.5);
+        border-left: 1px solid rgba(185, 185, 185, 0.5);
+        &:first-child {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+        &:last-child {
+          border-right: 1px solid rgba(185, 185, 185, 0.5);
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+        .img-point {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+    .forget-btn-row {
+      float: none;
+      .forget-btn {
+        font-size: 14px;
+        color: #23a1ef;
+      }
+    }
+    .keyboard-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .key-ul {
+      display: flex;
+      height: 50px;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid rgba(185, 185, 185, 0.24);
+      .key-li {
+        flex: 1;
+        font-size: 20px;
+        color: #4b5259;
+        border-left: 1px solid rgba(185, 185, 185, 0.24);
+        &:first-child {
+          border-left: none;
+        }
+        &.gray {
+          background-color: rgba(226, 232, 234, 1);
+        }
+        .icon-backspace {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+/* 加载中 */
+.loading-wrap {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #fff;
+}
+.loading-wrap .loading {
+  text-align: center;
+}
+.loading-icon {
+  width: 40px;
+  height: 20px;
+  margin: 0 auto;
+  font-size: 14px;
+  & > span {
+    display: inline-block;
+    width: 4px;
+    height: 100%;
+    border-radius: 2px;
+    background: lightgreen;
+    animation: load 1s ease infinite;
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+  }
+}
+@keyframes load {
+  0%,
+  100% {
+    height: 20px;
+    background: lightgreen;
+  }
+  50% {
+    height: 35px;
+    margin: -7.5px 0;
+    background: lightblue;
+  }
+}
+.loading-wrap .loading p {
+  margin-top: 10px;
+  padding: 0;
+}
+.success-icon {
+  width: 48px;
+  height: 48px;
+}
+/* 支付失败弹窗 */
+.pay-fail {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 750px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+.pay-fail-lay {
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #4b5259;
+}
+.pay-fail-lay .fail-title {
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0;
+}
+.pay-fail-lay .btns {
+  display: flex;
+  border-top: 1px solid #f1f1f1;
+}
+.pay-fail-lay .btns div {
+  flex: 1;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.pay-fail-lay .btns div:active {
+  background: #f3f3f3;
+}
+.pay-fail-lay .btns div:last-child {
+  border-left: 1px solid #f1f1f1;
+}
