@@ -85,7 +85,7 @@
   "devDependencies": {
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^7.0.0"
   },
   "jest": {
     "collectCoverageFrom": [
